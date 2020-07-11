@@ -2,7 +2,11 @@
     <div class="form">
         <h1>Inside form!</h1>
         <keep-alive>
-            <component v-bind:is="component" @toggleSteps="toggle"></component>
+            <component
+                :is="component"
+                @toggleSteps="toggle"
+                @submit="handleSubmit">
+            </component>
         </keep-alive>
     </div>
 </template>
@@ -16,23 +20,29 @@ export default {
     data() {
         return {
             component: "Step1",
+            user: {},
         };
     },
     methods: {
         toggle(info) {
-            this.handleData(info)
+            this.handleData(info);
             this.component === "Step1"
                 ? (this.component = "Step2")
                 : (this.component = "Step1");
         },
         handleData(info) {
-            console.log(info)
-        }
+            this.user = { ...this.user, ...info };
+            console.log(this.user)
+        },
+        handleSubmit(info) {
+            this.handleData(info);
+            console.log(this.user)
+            this.$store.dispatch({ type: "setUser", user: this.user });
+        },
     },
     components: {
         Step1,
         Step2,
     },
-
 };
 </script>

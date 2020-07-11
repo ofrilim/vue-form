@@ -5,16 +5,17 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        user: {
-            firstName: 'Limor',
-            lastName: 'Ofri'
-        }
+        user: null
     },
     mutations: {
-
+        setUser(state, { user }) {
+            state.user = user
+        }
     },
     actions: {
-
+        setUser(context, { user }) {
+            context.commit({ type: 'setUser', user })
+        }
     },
     getters: {
         user(state) {
