@@ -1,12 +1,13 @@
 <template>
     <div class="form">
-        <h1>Welcome, Guest!</h1>
         <keep-alive>
-            <component
-                :is="component"
-                @toggleSteps="toggle"
-                @submit="handleSubmit">
-            </component>
+            <transition name="fade" mode="out-in">
+                <component
+                    :is="component"
+                    @toggleSteps="toggle"
+                    @submit="handleSubmit">
+                </component>
+            </transition>
         </keep-alive>
     </div>
 </template>
@@ -21,6 +22,7 @@ export default {
         return {
             component: "Step1",
             user: {},
+            isFliped: false
         };
     },
     methods: {

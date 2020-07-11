@@ -1,15 +1,15 @@
 <template>
     <div class="step">
-        <form @submit.prevent="submit" class="form-container">
+        <form @submit.prevent="submit" class="container">
             <ul class="content">
                 <li>
-                    <label for="height">height</label>
-                    <input type="number" id="height" name="height" min=100 max=250 
+                    <label for="height">height*</label>
+                    <input type="number" id="height" name="height" 
                         placeholder="Enter your height in cm here"
                         v-model="info2.height" required/>
                 </li>
                 <li>
-                    <label for="weight">weight</label>
+                    <label for="weight">weight*</label>
                     <input type="number" id="weight" name="weight"
                         placeholder="Enter your weight here" 
                         v-model="info2.weight" required/>
@@ -52,6 +52,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss">
-</style>

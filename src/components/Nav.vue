@@ -1,7 +1,8 @@
 <template>
     <div class="nav">
-      <router-link to="/">Form</router-link> |
-      <router-link to="/Card">Card</router-link>
+        <router-link to="/">Sign In</router-link>
+        <router-link to="/Card">Card</router-link>
+        <!-- <img class="red-heart" src="../assets/redheart.png" /> -->
     </div>
 </template>
 
@@ -11,15 +12,21 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .nav {
-    padding: 30px;
+    padding: 1rem 1rem;
+    @media (max-width: 650px) {
+        padding: 1em 0 2em;
+    }
     a {
-        font-weight: bold;
-        color: #2c3e50;
-
+        color: #8E8D8A;
+        padding: 0 1rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        text-decoration: none;
         &.router-link-exact-active {
-        color: red;
+            color: rgb(226, 167, 6);
+            font-weight: bolder;
         }
     }
 }

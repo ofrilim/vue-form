@@ -20,8 +20,8 @@ export default {
     padding: 0;
     margin: 0;
 }
-#app {
-    overflow-y: hidden;
+body {
+    background-color: rgba(223, 215, 223, 0.89);
     font-family: "Fira Sans", "Helvetica Neue", sans-serif;
 }
 </style>
