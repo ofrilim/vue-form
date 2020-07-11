@@ -1,6 +1,6 @@
 <template>
     <div class="form">
-        <h1>Inside form!</h1>
+        <h1>Welcome, Guest!</h1>
         <keep-alive>
             <component
                 :is="component"
@@ -32,12 +32,11 @@ export default {
         },
         handleData(info) {
             this.user = { ...this.user, ...info };
-            console.log(this.user)
         },
         handleSubmit(info) {
             this.handleData(info);
-            console.log(this.user)
             this.$store.dispatch({ type: "setUser", user: this.user });
+            this.$router.push('/card');
         },
     },
     components: {

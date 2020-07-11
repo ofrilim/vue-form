@@ -27,8 +27,7 @@ export default {
         };
     },
     created() {
-        const user = this.$store.getters.user;
-        this.user = user;
+        this.user = this.$store.getters.user;
     },
 };
 </script>

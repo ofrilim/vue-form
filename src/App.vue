@@ -1,17 +1,17 @@
 <template>
-  <div id="app">
-    <Nav></Nav>
-    <router-view />
-  </div>
+    <div id="app">
+        <Nav></Nav>
+        <router-view />
+    </div>
 </template>
 
 <script>
 import Nav from "@/components/Nav.vue";
 export default {
     components: {
-        Nav
-    }
-}
+        Nav,
+    },
+};
 </script>
 
 <style lang="scss">
@@ -20,11 +20,8 @@ export default {
     padding: 0;
     margin: 0;
 }
-
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+    overflow-y: hidden;
+    font-family: "Fira Sans", "Helvetica Neue", sans-serif;
 }
 </style>
