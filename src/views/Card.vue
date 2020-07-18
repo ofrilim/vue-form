@@ -1,7 +1,7 @@
 <template>
     <div class="card-container">
         <section class="card" v-if="user">
-            <h3>{{user.firstName}} {{user.lastName}}'s profile</h3>
+            <h3>{{user.firstName}} {{user.lastName}}'s card</h3>
             <ul>
                 <li><span>first name:</span> {{ user.firstName }}</li>
                 <li><span>last name:</span> {{ user.lastName }}</li>
@@ -82,6 +82,7 @@ export default {
     }
     .heart-img {
         width: 30vw;
+        margin: 1rem;
     }
 }
 </style>

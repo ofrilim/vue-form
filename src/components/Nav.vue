@@ -15,18 +15,19 @@ export default {
 <style lang="scss">
 .nav {
     padding: 1rem 1rem;
-    @media (max-width: 650px) {
-        padding: 1em 0 2em;
-    }
     a {
         color: #8E8D8A;
-        padding: 0 1rem;
+        padding: 0.2rem;
+        margin-right: 1rem;
         font-size: 1.1rem;
         text-transform: uppercase;
         text-decoration: none;
         &.router-link-exact-active {
             color: rgb(226, 167, 6);
             font-weight: bolder;
+        }
+        &:hover {
+            border-bottom: 0.1em solid #fff;
         }
     }
 }
